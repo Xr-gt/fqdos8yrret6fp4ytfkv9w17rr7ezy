@@ -589,6 +589,10 @@ nav {
   transition: 0.05s ease-in-out;
 }
 
+.gallery_grid img {
+  aspect-ratio: 1.4/1;
+}
+
 .gallery_grid:hover a:not(:hover) {
   opacity: 0.4;
 }
