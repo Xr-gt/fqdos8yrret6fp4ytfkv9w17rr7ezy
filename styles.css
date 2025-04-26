@@ -635,52 +635,52 @@ nav {
   border-radius: 5px;
 }
 
-.blog {
-  background-image: linear-gradient(rgba(var(--black), 0.6), rgba(var(--black), 0.6)),
-    url("assets/header.jpg") !important;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-}
-
-.blog_container {
-  padding-block: 6rem;
-  display: grid;
-}
-
-.blog_content {
-  text-align: center;
-  overflow: hidden;
-}
-
-.blog_content .section_header {
-  margin-bottom: 4vh;
-  color: rgb(var(--white));
-}
-
-.blog_content h4 {
-  margin-bottom: 2vh;
-  font-size: 1.25rem;
-  font-weight: 400;
-  font-family: var(--header-font);
-  color: rgb(var(--white));
-}
-
-.blog_content p {
-  margin-bottom: 4vh;
-  line-height: 1.75rem;
-  color: rgb(var(--white));
-}
-
-.blog_content .btn {
-  background-color: transparent;
-  border: 2px solid rgb(var(--white));
-}
-
-.blog_content .btn:hover {
-  background-color: rgb(var(--less-light-blue));
-}
+/*.blog {*/
+/*  background-image: linear-gradient(rgba(var(--black), 0.6), rgba(var(--black), 0.6)),*/
+/*    url("assets/header.jpg") !important;*/
+/*  background-size: cover;*/
+/*  background-position: center center;*/
+/*  background-repeat: no-repeat;*/
+/*  border-radius: 20px;*/
+/*}*/
+/**/
+/*.blog_container {*/
+/*  padding-block: 6rem;*/
+/*  display: grid;*/
+/*}*/
+/**/
+/*.blog_content {*/
+/*  text-align: center;*/
+/*  overflow: hidden;*/
+/*}*/
+/**/
+/*.blog_content .section_header {*/
+/*  margin-bottom: 4vh;*/
+/*  color: rgb(var(--white));*/
+/*}*/
+/**/
+/*.blog_content h4 {*/
+/*  margin-bottom: 2vh;*/
+/*  font-size: 1.25rem;*/
+/*  font-weight: 400;*/
+/*  font-family: var(--header-font);*/
+/*  color: rgb(var(--white));*/
+/*}*/
+/**/
+/*.blog_content p {*/
+/*  margin-bottom: 4vh;*/
+/*  line-height: 1.75rem;*/
+/*  color: rgb(var(--white));*/
+/*}*/
+/**/
+/*.blog_content .btn {*/
+/*  background-color: transparent;*/
+/*  border: 2px solid rgb(var(--white));*/
+/*}*/
+/**/
+/*.blog_content .btn:hover {*/
+/*  background-color: rgb(var(--less-light-blue));*/
+/*}*/
 
 @keyframes scroll {
   to {
@@ -924,13 +924,13 @@ nav {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .blog_container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .blog_content {
-    grid-column: 2/3;
-  }
+  /*.blog_container {*/
+  /*  grid-template-columns: repeat(2, 1fr);*/
+  /*}*/
+  /**/
+  /*.blog_content {*/
+  /*  grid-column: 2/3;*/
+  /*}*/
 
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
