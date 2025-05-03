@@ -36,7 +36,7 @@
 .section_header {
   margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: 650;
+  font-weight: 700;
   font-family: var(--header-font);
   color: rgb(var(--black));
   text-align: center;
@@ -54,9 +54,9 @@
   display: flex;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: 700;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   border-radius: 0.625rem;
   justify-content: space-evenly;
   justify-self: center;
@@ -67,7 +67,7 @@
 .btn:hover {
   background-color: rgb(var(--less-light-blue));
   border-color: rgb(var(--white));
-  box-shadow: 0 0 15px rgb(var(--blue));
+  box-shadow: 0 0 15px rgba(var(--blue), 0.8);
 }
 
 .service_info {
@@ -116,7 +116,7 @@ body {
   background-repeat: no-repeat;
   border-bottom-right-radius: 200px 20px;
   border-bottom-left-radius: 200px 20px;
-  box-shadow: 0 10px 200px rgb(var(--blue));
+  box-shadow: 0 10px 200px rgba(var(--blue), 0.8);
 }
 
 nav {
@@ -184,14 +184,14 @@ nav {
 
 .nav_links.open {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgb(var(--black));
+  box-shadow: 0 2px 4px rgba(var(--black), 0.8);
   overflow-y: scroll;
 }
 
 .nav_links a {
   padding-bottom: 5px;
   font-size: 1.25rem;
-  font-weight: 650;
+  font-weight: 700;
   color: rgb(var(--black));
   border-bottom: 2px solid transparent;
   text-shadow: none;
@@ -202,7 +202,7 @@ nav {
   border-color: rgb(var(--less-light-blue));
   color: rgb(var(--less-light-blue));
   font-weight: 700;
-  text-shadow: 0px 5px 30px rgb(var(--blue));
+  text-shadow: 0px 5px 30px rgba(var(--blue), 0.8);
   font-size: 1.5rem;
 }
 
@@ -259,7 +259,7 @@ nav {
   text-align: center;
   width: 12rem;
   height: 4rem;
-  font-weight: 650;
+  font-weight: 700;
   font-size: 1.25rem;
   position: absolute;
   top: 76px;
@@ -268,7 +268,7 @@ nav {
   background-color: rgba(var(--less-light-blue), 0.2);
   backdrop-filter: blur(2px);
   border-radius: 20px;
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   transition: 0.05s ease-in-out;
   cursor: pointer;
   box-shadow: none;
@@ -276,7 +276,7 @@ nav {
 
 .call_btn:hover {
   background-color: rgb(var(--less-light-blue));
-  box-shadow: 0 4px 8px rgb(var(--blue));
+  box-shadow: 0 4px 8px rgba(var(--blue), 0.8);
   border-color: rgb(var(--white));
 }
 
@@ -300,7 +300,7 @@ nav {
   font-size: 2.6rem;
   background-color: rgb(var(--less-light-blue));
   color: rgb(var(--less-light-blue));
-  box-shadow: 0 3px 6px rgb(var(--black));
+  box-shadow: 0 3px 6px rgba(var(--black), 0.8);
   cursor: pointer;
   z-index: 9;
 }
@@ -364,7 +364,7 @@ nav {
 }
 
 .back_to_top {
-  font-weight: 650;
+  font-weight: 700;
   font-size: 1.25rem;
   position: fixed;
   bottom: 30vh;
@@ -379,7 +379,7 @@ nav {
   writing-mode: vertical-lr;
   cursor: pointer;
   transition: 0.1s ease-in-out;
-  box-shadow: 0 3px 6px rgb(var(--black));
+  box-shadow: 0 3px 6px rgba(var(--black), 0.8);
   opacity: 0;
   z-index: 8;
 }
@@ -388,7 +388,7 @@ nav {
   bottom: 31vh;
   background-color: rgb(var(--less-light-blue));
   color: rgb(var(--white));
-  border: 2px, solid rgb(var(--white));
+  border: 2px solid rgb(var(--white));
 }
 
 .about_container .section_description {
@@ -401,13 +401,13 @@ nav {
   max-width: 320px;
   margin-inline: auto;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgb(var(--blue));
+  box-shadow: 0 5px 10px rgba(var(--blue), 0.8);
 }
 
 .client_container {
   padding-block: 2rem;
   background-color: rgb(var(--dark-blue));
-  box-shadow: inset 0 0px 10px rgb(var(--black));
+  box-shadow: inset 0 0px 10px rgba(var(--black), 0.8);
 }
 
 .swiper {
@@ -427,9 +427,9 @@ nav {
   padding-block: 2rem;
   background-color: rgb(var(--light-blue));
   border-radius: 10px;
-  border: 2px, solid rgb(var(--white));
+  border: 2px solid rgb(var(--white));
   margin-inline: 0.6rem;
-  box-shadow: 0 5px 10px rgb(var(--black));
+  box-shadow: 0 5px 10px rgba(var(--black), 0.8);
 }
 
 .client_card img {
@@ -557,7 +557,7 @@ nav {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   font-size: 1.75rem;
-  font-weight: 450;
+  font-weight: 500;
   font-family: var(--header-font);
   color: rgb(var(--white));
 }
@@ -603,7 +603,7 @@ nav {
   padding-block: 2rem;
   padding-inline: 1rem;
   background-color: rgb(var(--dark-blue));
-  box-shadow: inset 0 0px 10px rgb(var(--black));
+  box-shadow: inset 0 0px 10px rgba(var(--black), 0.8);
   overflow: hidden;
 }
 
@@ -631,7 +631,7 @@ nav {
 
 .paint_brands_flex img {
   max-width: 150px;
-  box-shadow: 0 5px 10px rgb(var(--black));
+  box-shadow: 0 5px 10px rgba(var(--black), 0.8);
   border-radius: 5px;
 }
 
@@ -743,7 +743,7 @@ nav {
 
 .footer_links a:hover {
   color: rgb(var(--dark-blue));
-  text-shadow: 0 0px 20px rgb(var(--blue));
+  text-shadow: 0 0px 20px rgba(var(--blue), 0.8);
   transform: scale(1.4);
 }
 
@@ -760,9 +760,9 @@ nav {
   display: flex;
   padding: 0.5rem 3.5rem;
   border-radius: 5px;
-  font-weight: 650;
+  font-weight: 700;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   width: 200px;
   height: 36px;
   font-size: 1.125rem;
@@ -789,14 +789,14 @@ nav {
   text-align: center;
 }
 
-@media (width > 319px) {
+@media (min-width: 319px) {
   .nav_get_offer_btn {
     display: flex;
     border-radius: 5px;
-    font-weight: 650;
+    font-weight: 700;
     text-align: center;
     background-color: rgb(var(--dark-blue));
-    border: 2px, solid rgb(var(--dark-blue));
+    border: 2px solid rgb(var(--dark-blue));
     width: 150px;
     height: 36px;
     font-size: 0.8rem;
@@ -816,7 +816,7 @@ nav {
 
 }
 
-@media (width > 375px) {
+@media (min-width: 375px) {
   .get_offer_btn .btn {
     padding-inline: 2rem;
     font-size: 1.5rem;
@@ -824,7 +824,7 @@ nav {
   }
 }
 
-@media (width > 540px) {
+@media (min-width: 540px) {
   .service_grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -862,7 +862,7 @@ nav {
   }
 }
 
-@media (width > 768px) {
+@media (min-width: 768px) {
   .grid_container .frontpage {
     font-size: 1.25rem;
     padding-left: 2.5rem;
@@ -880,7 +880,7 @@ nav {
 
   .swiper-button-next,
   .swiper-button-prev {
-    font-weight: 650;
+    font-weight: 700;
     visibility: visible;
     background-color: transparent;
     color: rgb(var(--white));
@@ -907,7 +907,7 @@ nav {
   .client_card p {
     margin-bottom: 1rem;
     color: rgb(var(--text-light));
-    font-weight: 650;
+    font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
@@ -947,7 +947,7 @@ nav {
   }
 }
 
-@media (width > 960px) {
+@media (min-width: 960px) {
   .header {
     border-bottom-right-radius: 20px 20px;
     border-bottom-left-radius: 20px 20px;
@@ -1000,7 +1000,7 @@ nav {
   }
 }
 
-@media (width > 1024px) {
+@media (min-width: 1024px) {
   .grid_container .frontpage {
     font-size: 1.75rem;
   }
@@ -1010,7 +1010,7 @@ nav {
   }
 }
 
-@media (height < 580px) {
+@media (max-width: 580px) {
   .header {
     max-height: 130vh;
   }

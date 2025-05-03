@@ -36,9 +36,9 @@
   display: flex;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: 650;
+  font-weight: 700;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   border-radius: 0.625rem;
   justify-content: space-evenly;
   justify-self: center;
@@ -49,7 +49,7 @@
 .btn:hover {
   background-color: rgb(var(--less-light-blue));
   border-color: rgb(var(--white));
-  box-shadow: 0 0 15px rgb(var(--blue));
+  box-shadow: 0 0 15px rgba(var(--blue), 0.8);
 }
 
 img {
@@ -90,7 +90,7 @@ body {
   background-repeat: no-repeat;
   border-bottom-right-radius: 200px 20px;
   border-bottom-left-radius: 200px 20px;
-  box-shadow: 0 10px 200px rgb(var(--blue));
+  box-shadow: 0 10px 200px rgba(var(--blue), 0.8);
 }
 
 nav {
@@ -158,14 +158,14 @@ nav {
 
 .nav_links.open {
   transform: translateY(0);
-  box-shadow: 0 2px 4px rgb(var(--black));
+  box-shadow: 0 2px 4px rgba(var(--black), 0.8);
   overflow-y: scroll;
 }
 
 .nav_links a {
   padding-bottom: 5px;
   font-size: 1.25rem;
-  font-weight: 650;
+  font-weight: 700;
   color: rgb(var(--black));
   border-bottom: 2px solid transparent;
   text-shadow: none;
@@ -176,7 +176,7 @@ nav {
   border-color: rgb(var(--less-light-blue));
   color: rgb(var(--less-light-blue));
   font-weight: 700;
-  text-shadow: 0px 5px 30px rgb(var(--blue));
+  text-shadow: 0px 5px 30px rgba(var(--blue), 0.8);
   font-size: 1.5rem;
 }
 
@@ -187,7 +187,7 @@ nav {
   margin-bottom: 2.5rem;
   padding-block: 1.375rem;
   font-size: 2rem;
-  font-weight: 650;
+  font-weight: 700;
   font-family: var(--header-font);
   color: rgb(var(--black));
   text-align: center;
@@ -217,7 +217,7 @@ h3 {
   font-size: 2.6rem;
   background-color: rgb(var(--less-light-blue));
   color: rgb(var(--less-light-blue));
-  box-shadow: 0 3px 6px rgb(var(--black));
+  box-shadow: 0 3px 6px rgba(var(--black), 0.8);
   cursor: pointer;
   z-index: 9;
 }
@@ -281,7 +281,7 @@ h3 {
 }
 
 .back_to_top {
-  font-weight: 650;
+  font-weight: 700;
   font-size: 1.25rem;
   position: fixed;
   bottom: 30vh;
@@ -297,7 +297,7 @@ h3 {
   cursor: pointer;
   transition: 0.1s ease-in-out;
   z-index: 1;
-  box-shadow: 0 3px 6px rgb(var(--black));
+  box-shadow: 0 3px 6px rgba(var(--black), 0.8);
   opacity: 0;
   z-index: 8;
 }
@@ -305,7 +305,7 @@ h3 {
 .back_to_top:hover {
   bottom: 31vh;
   background-color: rgb(var(--less-light-blue));
-  border: 2px, solid rgb(var(--white));
+  border: 2px solid rgb(var(--white));
   color: rgb(var(--white));
 }
 
@@ -371,7 +371,7 @@ h3 {
 .footer_links a:hover {
   color: rgb(var(--dark-blue));
   border-color: rgb(var(--dark-blue));
-  text-shadow: 0 0px 20px rgb(var(--blue));
+  text-shadow: 0 0px 20px rgba(var(--blue), 0.8);
   transform: scale(1.4);
 }
 
@@ -388,9 +388,9 @@ h3 {
   display: flex;
   padding: 0.5rem 3.5rem;
   border-radius: 5px;
-  font-weight: 650;
+  font-weight: 700;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   width: 200px;
   height: 36px;
   font-size: 1.125rem;
@@ -417,14 +417,14 @@ h3 {
   text-align: center;
 }
 
-@media (width > 319px) {
+@media (min-width: 319px) {
   .nav_call_btn {
     display: flex;
     border-radius: 5px;
-    font-weight: 650;
+    font-weight: 700;
     text-align: center;
     background-color: rgb(var(--dark-blue));
-    border: 2px, solid rgb(var(--dark-blue));
+    border: 2px solid rgb(var(--dark-blue));
     width: 150px;
     height: 36px;
     font-size: 1rem;
@@ -443,7 +443,7 @@ h3 {
   }
 }
 
-@media (width > 540px) {
+@media (min-width: 540px) {
   .footer_container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -461,7 +461,7 @@ h3 {
   }
 }
 
-@media (width > 768px) {
+@media (min-width: 768px) {
   .footer_container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -477,7 +477,7 @@ h3 {
   }
 }
 
-@media (width > 900px) {
+@media (min-width: 900px) {
   body {
     padding-top: 0;
   }
@@ -546,7 +546,7 @@ h3 {
   }
 }
 
-@media (width > 1024px) {
+@media (min-width: 1024px) {
   nav {
     max-width: 1600px;
   }
