@@ -55,7 +55,7 @@
   font-size: 1rem;
   font-weight: 650;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   border-radius: 0.625rem;
   justify-content: space-evenly;
   justify-self: center;
@@ -342,7 +342,7 @@ nav {
 .back_to_top:hover {
   bottom: 31vh;
   background-color: rgb(var(--less-light-blue));
-  border: 2px, solid rgb(var(--white));
+  border: 2px solid rgb(var(--white));
   color: rgb(var(--white));
 }
 
@@ -428,7 +428,7 @@ nav {
   border-radius: 5px;
   font-weight: 650;
   background-color: rgb(var(--dark-blue));
-  border: 2px, solid rgb(var(--dark-blue));
+  border: 2px solid rgb(var(--dark-blue));
   width: 200px;
   height: 36px;
   font-size: 1.125rem;
@@ -463,7 +463,7 @@ nav {
     font-weight: 650;
     text-align: center;
     background-color: rgb(var(--dark-blue));
-    border: 2px, solid rgb(var(--dark-blue));
+    border: 2px solid rgb(var(--dark-blue));
     width: 150px;
     height: 36px;
     font-size: 0.8rem;
