@@ -143,11 +143,7 @@ navLinks.addEventListener("click", (e) => {
         }
     };
 
-    const shareBtn = document.querySelector('.share-btn');
-    const socialIcons = document.querySelector('.social-icons');
-    const riIcons = document.querySelectorAll('.social-icons a i');
-
-
+const shareBtn = document.querySelector('.share-btn');
 const socialIcons = document.querySelector('.social-icons');
 const riIcons = document.querySelectorAll('.social-icons a i'); // Select all icons inside the .social-icons container
 const shareIcon = document.querySelector('.share-icon');
