@@ -49,6 +49,29 @@
   text-align: center;
 }
 
+/* -------------------------- */
+
+/* Ensure thumbnails look good and are clickable */
+.gallery_thumbnail {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(var(--black), 0.4);
+  object-fit: cover;
+  aspect-ratio: 1.6/1;
+  cursor: pointer;
+  /* ADDED: Indicate clickability */
+  transition: 0.3s;
+  /* ADDED: For hover effect */
+}
+
+.gallery_thumbnail:hover {
+  transform: scale(1.05);
+  /* ADDED: Slight zoom on hover */
+}
+
+/* -------------------------- */
+
 .btn {
   display: flex;
   padding: 0.75rem 1.5rem;
@@ -236,6 +259,106 @@ nav {
 
 .gallery_container:hover img:not(:hover) {
   opacity: 0.4;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--black), 0.9);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.lightbox-content-wrapper {
+  max-width: 90%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+.close {
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  color: rgb(var(--white));
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close:hover,
+.close:focus {
+  color: rgba(var(--less-light-blue), 0.9);
+  text-decoration: none;
+}
+
+.share-buttons {
+  position: fixed;
+  bottom: 20;
+  right: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 15px;
+  border: 2px solid rgba(var(--white), 0.7);
+  background-color: rgba(var(--black), 0.5);
+  border-radius: 5px;
+  z-index: 1001;
+}
+
+.share-buttons:hover {
+  background-color: rgba(var(--less-light-blue), 0.9);
+}
+
+.prev,
+.next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(var(--white));
+  font-size: 25px;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  background-color: rgba(var(--black), 0.4);
+  border: 2px solid rgba(var(--white), 0.5);
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 2002;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(var(--less-light-blue), 0.9);
 }
 
 .share-btn {

@@ -13,13 +13,20 @@
 		})(window, document, 'script', 'dataLayer', 'GTM-N5NQKLC2');</script>
 	<!-- End Google Tag Manager -->
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scake=1.0">
-	<link rel="cannonical" href="https://xrwma.com/contact/">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="canonical" href="https://xrwma.com/contact/">
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 	<meta name="description"
 		content="Μεταμορφώστε το Σπίτι σας με Επαγγελματικές Υπηρεσίες Ελαιοχρωματισμού ,Ελαιοχρωματιστές για Ποιοτικές Υπηρεσίες Βαφής στην Αθήνα / Ελαιοχρωματισμός Κατοικιών,Βάψιμο Διαμερισμάτων,Βάψιμο Πολυκατοικιώv,Βάψιμο Γραφείων-Καταστημάτων">
-	<link rel="stylesheet" href="https://unpkg.com/remixicon@4.1.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="https://unpkg.com/remixicon@4.1.0/fonts/remixicon.css" media="print"
+		onload="this.media='all'">
+	<link rel="preload" href="styles-contact.css" as="style">
 	<link rel="stylesheet" href="styles-contact.css">
+	<noscript>
+		<link rel="stylesheet" href="styles-contact.css">
+	</noscript>
+	<link rel="preload" as="image" href="assets/paint-roller-fixed.svg">
+	<link rel="preload" as="image" href="assets/header2.jpg">
 	<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
 	<link rel="mask-icon" href="assets/favicon.svg" color="#000000">
 	<link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
@@ -36,7 +43,22 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<title>Επικοινωνία | xrwma.com | Υπηρεσίες Ελαιοχρωματισμού ,Ανακαίνισης Σπιτιού</title>
-
+	<script type="application/ld+json">
+	{
+	      "@context": "https://schema.org",
+	      "@type": "HousePainter",
+	      "name": "Xrwma.com",
+	      "image": "https://xrwma.com/assets/og-image2.png",
+	      "url": "https://xrwma.com",
+	      "telephone": "+306996021179",
+	      "address": {
+	        "@type": "PostalAddress",
+	        "addressLocality": "Athens",
+	        "addressCountry": "GR"
+		},
+	      "description": "Επαγγελματικές Υπηρεσίες Ελαιοχρωματισμού και Ανακαίνισης στην Αθήνα."
+	}
+	</script>
 </head>
 
 <body><!-- Google Tag Manager (noscript) -->
@@ -87,7 +109,16 @@
 		<h3>
 			-------------- Ή --------------
 		</h3>
-		<script type="text/javascript" src="https://form.jotform.com/jsform/243317032839355"></script>
+
+		<iframe id="JotFormIFrame-243317032839355" title="Επικοινωνία" onload="window.parent.scrollTo(0,0)"
+			allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment"
+			src="https://form.jotform.com/243317032839355" frameborder="0"
+			style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no">
+
+		</iframe>
+		<script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+		<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-243317032839355']", "https://form.jotform.com/")</script>
+
 		<button class="share-btn" id="shareBtn">
 			<div class="social-icons">
 				<a href="https://www.facebook.com/people/Xrwmacom/61577831184835/" title="Facebook"><i
@@ -110,7 +141,7 @@
 			<div class="section_container footer_container">
 				<div class="footer_col">
 					<a href="index.html#home"><img src="assets/paint-roller-fixed2.svg"
-							loading="eager" alt="Xrwma.com Λογότυπο"></a>
+							loading="lazy" alt="Xrwma.com Λογότυπο"></a>
 					<div class="footer_socials">
 						<a href="https://www.facebook.com/people/Xrwmacom/61577831184835/"
 							title="Facebook"><i class="ri-facebook-fill"></i></a>
@@ -142,7 +173,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="main.js"></script>
+	<script src="main.js" defer></script>
 </body>
 
 </html>
