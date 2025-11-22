@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 const navGetOfferBtn = document.querySelector(".nav_get_offer_btn");
 
 function updateBtnVisibility() {
@@ -52,7 +53,6 @@ navLinks.addEventListener("click", (e) => {
 // =================================================================
 // ALL LIGHTBOX AND UTILITY LOGIC MUST BE WITHIN THIS BLOCK
 // =================================================================
-document.addEventListener('DOMContentLoaded', () => {
     
     // MODIFIED: Automatically populate the images array from the HTML
     const galleryThumbnails = document.querySelectorAll(".gallery_thumbnail");
@@ -68,10 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById("slideshowModal");
     const modalImg = document.getElementById("modalImage");
     const closeBtn = document.getElementsByClassName("close")[0];
-    
-    // =================================================================
-    // NEW: UNIVERSAL SHARE BUTTON FUNCTION DEFINITION
-    // =================================================================
     
     // Define the fixed share data once
     const FIXED_SHARE_DATA = {
@@ -109,10 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the universal button
     initUniversalShareButton('.universal-share-btn');
     
-    // =================================================================
-    // LIGHTBOX FUNCTIONS
-    // =================================================================
-
     // Add click event to thumbnails
     document.querySelectorAll(".gallery_thumbnail").forEach(img => {
         img.addEventListener("click", function () {
@@ -150,22 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "none";
         }
     };
-    
-    // 🖼️ END OF LIGHTBOX CODE 🖼️
 
-    // Select necessary elements (Moved inside DOMContentLoaded for scope)
     const shareBtn = document.querySelector('.share-btn');
     const socialIcons = document.querySelector('.social-icons');
     const riIcons = document.querySelectorAll('.social-icons a i');
 
-    // ... (Existing logic for shareBtn toggle, backToTopBtn, ScrollReveal, and Swiper checks) ...
-    
-    // ... (I assume the rest of your original logic for shareBtn, backToTopBtn, Swiper, and ScrollReveal continues here)
-    
-}); // <-- This is the final, correct closing brace for DOMContentLoaded
 
-// Select necessary elements (Moved inside DOMContentLoaded for proper scoping)
-const shareBtn = document.querySelector('.share-btn');
 const socialIcons = document.querySelector('.social-icons');
 const riIcons = document.querySelectorAll('.social-icons a i'); // Select all icons inside the .social-icons container
 const shareIcon = document.querySelector('.share-icon');
@@ -278,4 +260,4 @@ Array.from(paint_brands.children).forEach((item) => {
     const duplicateNode = item.cloneNode(true);
     duplicateNode.setAttribute("aria-hidden", true);
     paint_brands.appendChild(duplicateNode);
-});
+});});
