@@ -1,6 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-const navGetOfferBtn = document.querySelector(".nav_get_offer_btn");
 
+const navGetOfferBtn = document.querySelector(".nav_get_offer_btn");
+const menuBtn = document.getElementById("menu-btn");
+const navLinks = document.getElementById("nav-links");
+const menuBtnIcon = menuBtn.querySelector("i");
+
+// Mobile Menu Toggle----------------------------------------------------
+if (menuBtn && navLinks) {
+menuBtn.addEventListener("click", (e) => {
+    navLinks.classList.toggle("open");
+    const isOpen = navLinks.classList.contains("open");
+    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+});
+
+navLinks.addEventListener("click", (e) => {
+    navLinks.classList.remove("open");
+    menuBtnIcon.setAttribute("class", "ri-menu-line");
+});
+}
+//Scroll Event (Button Visibility)---------------------------------------
 function updateBtnVisibility() {
   if (window.orientation === 0) {
     if (window.scrollY > (window.innerHeight - 140)) { /* adjust the threshold value as needed */
@@ -20,56 +38,17 @@ function updateBtnVisibility() {
 
 // Scroll event listener
 window.addEventListener('scroll', updateBtnVisibility);
-
 // Orientation change event listener
 window.addEventListener('orientationchange', () => {
     updateBtnVisibility(); // Call the function to immediately adjust visibility
 });
-
 // Initial call to ensure the button visibility is correct on page load or reload
 updateBtnVisibility();
-
 navGetOfferBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); /* smooth scrolling */
 });
 
-
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
-
-menuBtn.addEventListener("click", (e) => {
-    navLinks.classList.toggle("open");
-
-    const isOpen = navLinks.classList.contains("open");
-    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
-
-navLinks.addEventListener("click", (e) => {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
-
-// =================================================================
-// ALL LIGHTBOX AND UTILITY LOGIC MUST BE WITHIN THIS BLOCK
-// =================================================================
-    
-    // MODIFIED: Automatically populate the images array from the HTML
-    const galleryThumbnails = document.querySelectorAll(".gallery_thumbnail");
-    const images = Array.from(galleryThumbnails).map((img, index) => ({
-        src: img.getAttribute('src'), // Get the image source
-        alt: img.getAttribute('alt'), // Get the alt text for the caption
-        'data-index': img.setAttribute('data-index', index)
-    }));
-
-    let currentIndex = 0;
-
-    // Get modal elements
-    const modal = document.getElementById("slideshowModal");
-    const modalImg = document.getElementById("modalImage");
-    const closeBtn = document.getElementsByClassName("close")[0];
-    
-    // Define the fixed share data once
+ // Define the fixed share data once----------------------------------------------
     const FIXED_SHARE_DATA = {
         title: "Xrwma.com Gallery",
         text: "Xrwma.com |Η συλλογή μας από Επαγγελματικούς Ελαιοχρωματισμούς και Ανακαινίσεις!",
@@ -101,47 +80,71 @@ navLinks.addEventListener("click", (e) => {
             });
         });
     }
+// Initialize the universal button
+initUniversalShareButton('.universal-share-btn');
 
-    // Initialize the universal button
-    initUniversalShareButton('.universal-share-btn');
+// =================================================================
+    const galleryThumbnails = document.querySelectorAll(".gallery_thumbnail");
     
+     if (galleryThumbnails.length > 0) {
+    // Get modal elements
+     const modal = document.getElementById("slideshowModal");
+     const modalImg = document.getElementById("modalImage");
+     const closeBtn = document.querySelector(".close");
+
+     let currentIndex = 0;
+     const images = Array.from(galleryThumbnails).map((img, index) => ({
+        src: img.getAttribute('src'), // Get the image source
+        alt: img.getAttribute('alt'), // Get the alt text for the caption
+        'data-index': img.setAttribute('data-index', index)
+     }));
+       
     // Add click event to thumbnails
-    document.querySelectorAll(".gallery_thumbnail").forEach(img => {
+     document.querySelectorAll(".gallery_thumbnail").forEach(img => {
         img.addEventListener("click", function () {
             currentIndex = parseInt(this.getAttribute("data-index")); 
             openModal();
         });
-    });
+     });
 
-    // Open modal and display current image
-    function openModal() {
+     // Open modal and display current image
+     function openModal() {
         modal.style.display = "flex"; 
         modalImg.src = images[currentIndex].src;
         modalImg.alt = images[currentIndex].alt;
+     }
+
+     // Close modal via the 'x' button
+    if (closeBtn) {
+            closeBtn.onclick = () => { modal.style.display = "none"; };
+        }
+    // Close modal when clicking outside the image (the modal backdrop)
+    if (modal) {
+        modal.onclick = function (event) {
+            if (event.target === modal) { 
+                modal.style.display = "none";
+                }
+        };
     }
 
-    // Close modal via the 'x' button
-    closeBtn.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    // Navigate to next/previous image (kept globally accessible via window)
-    window.changeImage = function (direction) {
+     // Navigate to next/previous image (kept globally accessible via window)
+     window.changeImage = function (direction) {
         currentIndex += direction;
-        // Wrap-around logic
         if (currentIndex >= images.length) currentIndex = 0;
         if (currentIndex < 0) currentIndex = images.length - 1; 
-        
         modalImg.src = images[currentIndex].src;
         modalImg.alt = images[currentIndex].alt;
+     };
+     // Keyboard support
+     document.addEventListener('keydown', (e) => {
+       if (modal && modal.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') window.changeImage(-1);
+            if (e.key === 'ArrowRight') window.changeImage(1);
+            if (e.key === 'Escape') modal.style.display = 'none';
+       }
+     });
     };
-
-    // Close modal when clicking outside the image (the modal backdrop)
-    modal.onclick = function (event) {
-        if (event.target === modal) { 
-            modal.style.display = "none";
-        }
-    };
+});
 
 const shareBtn = document.querySelector('.share-btn');
 const socialIcons = document.querySelector('.social-icons');
@@ -192,34 +195,6 @@ backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); /* smooth scrolling */
 });
 
-
-const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 400,
-    easing: "ease-in",
-};
-
-ScrollReveal().reveal(".about_container .section_header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".about_container .section_description", {
-    ...scrollRevealOption,
-    delay: 200,
-    interval: 200,
-});
-ScrollReveal().reveal(".service_container .section_header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".service_container .section_description", {
-    ...scrollRevealOption,
-    delay: 200,
-});
-ScrollReveal().reveal(".service_card", {
-    duration: 400,
-    delay: 400,
-    interval: 200,
-});
 if (document.querySelector('.swiper')) {
 const swiper = new Swiper(".swiper", {
     loop: true,
@@ -234,21 +209,52 @@ const swiper = new Swiper(".swiper", {
 });
 }
 
-ScrollReveal().reveal(".blog_content .section_header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".blog_content h4", {
-    ...scrollRevealOption,
-    delay: 200,
-});
-ScrollReveal().reveal(".blog_content p", {
-    ...scrollRevealOption,
-    delay: 300,
-});
-ScrollReveal().reveal(".blog_content .blog_btn", {
-    ...scrollRevealOption,
-    delay: 400,
-});
+if (typeof ScrollReveal !== 'undefined') {
+ const scrollRevealOption = {
+     distance: "50px",
+     origin: "bottom",
+     duration: 400,
+     easing: "ease-in",
+     reset: false
+ };
+
+ ScrollReveal().reveal(".about_container .section_header", {
+     ...scrollRevealOption,
+ });
+ ScrollReveal().reveal(".about_container .section_description", {
+     ...scrollRevealOption,
+     delay: 200,
+     interval: 200,
+ });
+ ScrollReveal().reveal(".service_container .section_header", {
+     ...scrollRevealOption,
+ });
+ ScrollReveal().reveal(".service_container .section_description", {
+     ...scrollRevealOption,
+     delay: 200,
+ });
+ ScrollReveal().reveal(".service_card", {
+     duration: 400,
+     delay: 400,
+     interval: 200,
+ });
+ 
+ ScrollReveal().reveal(".blog_content .section_header", {
+     ...scrollRevealOption,
+ });
+ ScrollReveal().reveal(".blog_content h4", {
+     ...scrollRevealOption,
+     delay: 200,
+ });
+ ScrollReveal().reveal(".blog_content p", {
+     ...scrollRevealOption,
+     delay: 300,
+ });
+ ScrollReveal().reveal(".blog_content .blog_btn", {
+     ...scrollRevealOption,
+     delay: 400,
+ });
+};
 
 const paint_brands = document.querySelector(".paint_brands_flex");
 
@@ -256,4 +262,4 @@ Array.from(paint_brands.children).forEach((item) => {
     const duplicateNode = item.cloneNode(true);
     duplicateNode.setAttribute("aria-hidden", true);
     paint_brands.appendChild(duplicateNode);
-});});
+});
