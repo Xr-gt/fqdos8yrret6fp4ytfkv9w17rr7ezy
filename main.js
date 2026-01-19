@@ -118,14 +118,14 @@ initUniversalShareButton('.universal-share-btn');
     if (closeBtn) {
             closeBtn.onclick = () => { modal.style.display = "none"; };
         }
-    // Close modal when clicking outside the image (the modal backdrop)
-    if (modal) {
-        modal.onclick = function (event) {
-            if (event.target === modal) { 
-                modal.style.display = "none";
-                }
-        };
-    }
+    // // Close modal when clicking outside the image (the modal backdrop)
+    // if (modal) {
+    //     modal.onclick = function (event) {
+    //         if (event.target === modal) { 
+    //             modal.style.display = "none";
+    //             }
+    //     };
+    // }
 
      // Navigate to next/previous image (kept globally accessible via window)
      window.changeImage = function (direction) {
