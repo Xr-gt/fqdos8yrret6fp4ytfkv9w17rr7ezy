@@ -594,7 +594,7 @@ nav {
 }
 
 .gallery_grid:hover a:not(:hover) {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .paint_container {

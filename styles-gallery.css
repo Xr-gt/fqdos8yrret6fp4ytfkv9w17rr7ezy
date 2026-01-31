@@ -61,12 +61,12 @@
   aspect-ratio: 1.6/1;
   cursor: pointer;
   /* ADDED: Indicate clickability */
-  transition: 0.3s;
+  transition: 0.2s;
   /* ADDED: For hover effect */
 }
 
 .gallery_thumbnail:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   /* ADDED: Slight zoom on hover */
 }
 
@@ -258,7 +258,7 @@ nav {
 }
 
 .gallery_container:hover img:not(:hover) {
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .modal {
