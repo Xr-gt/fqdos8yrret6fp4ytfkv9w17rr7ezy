@@ -310,6 +310,10 @@ nav {
   text-decoration: none;
 }
 
+.share-buttons i {
+  padding: 8px 15px;
+}
+
 .share-buttons {
   position: fixed;
   bottom: 20;
@@ -318,7 +322,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 8px 15px;
+  padding: 8px 0px;
   border: 2px solid rgba(var(--white), 0.7);
   background-color: rgba(var(--black), 0.5);
   border-radius: 5px;
@@ -378,7 +382,7 @@ nav {
   color: rgb(var(--less-light-blue));
   box-shadow: 0 3px 6px rgb(var(--black));
   cursor: pointer;
-  z-index: 9;
+  z-index: 3001;
 }
 
 .share-btn::before {
