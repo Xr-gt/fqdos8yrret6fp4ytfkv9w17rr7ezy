@@ -111,7 +111,6 @@ body {
 .header {
   min-width: 90vw;
   min-height: 100vh;
-  background-image: url("assets/header2.webp") !important;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
