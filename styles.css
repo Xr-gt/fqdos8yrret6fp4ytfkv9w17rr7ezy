@@ -531,6 +531,15 @@ body {
 }
 
 @media (width > 768px) {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-weight: 650;
+    visibility: visible;
+    background-color: transparent;
+    color: rgb(var(--white));
+  }
+
   .client_container {
     padding-bottom: 2rem;
     background-position: center center;
