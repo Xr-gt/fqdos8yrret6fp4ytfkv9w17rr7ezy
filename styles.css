@@ -24,6 +24,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-display: swap;
 }
 
 .section_container {
@@ -110,7 +111,7 @@ body {
 .header {
   min-width: 90vw;
   min-height: 100vh;
-  background-image: url("assets/header2.jpg") !important;
+  background-image: url("assets/header2.webp") !important;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -594,7 +595,7 @@ nav {
 }
 
 .gallery_grid:hover a:not(:hover) {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .paint_container {
