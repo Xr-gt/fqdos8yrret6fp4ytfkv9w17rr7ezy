@@ -195,19 +195,26 @@ backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" }); /* smooth scrolling */
 });
 
-if (document.querySelector('.swiper')) {
-const swiper = new Swiper(".swiper", {
-    loop: true,
-    effect:'slide',
-    pagination: {
-     el: ".swiper-pagination",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+window.addEventListener('load', function() {
+    // Check if Swiper exists before running to avoid the error
+  if (typeof Swiper !== 'undefined') {
+   if (document.querySelector('.swiper')) {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      effect:'slide',
+      pagination: {
+       el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+   }
+  } else {
+        console.error("Swiper failed to load from CDN");
+  }
 });
-}
 
 if (typeof ScrollReveal !== 'undefined') {
  const scrollRevealOption = {
