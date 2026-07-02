@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initMySite() {
 
 const navGetOfferBtn = document.querySelector(".nav_get_offer_btn");
 const menuBtn = document.getElementById("menu-btn");
@@ -144,7 +144,6 @@ initUniversalShareButton('.universal-share-btn');
        }
      });
     };
-});
 
 const shareBtn = document.querySelector('.share-btn');
 const socialIcons = document.querySelector('.social-icons');
@@ -214,7 +213,7 @@ window.addEventListener('load', function() {
   } else {
         console.error("Swiper failed to load from CDN");
   }
-});
+
 
 if (typeof ScrollReveal !== 'undefined') {
  const scrollRevealOption = {
@@ -262,6 +261,7 @@ if (typeof ScrollReveal !== 'undefined') {
      delay: 400,
  });
 };
+});
 
 const paint_brands = document.querySelector(".paint_brands_flex");
 
@@ -269,4 +269,9 @@ Array.from(paint_brands.children).forEach((item) => {
     const duplicateNode = item.cloneNode(true);
     duplicateNode.setAttribute("aria-hidden", true);
     paint_brands.appendChild(duplicateNode);
-});
+});}
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMySite);
+} else {
+    initMySite();
+}

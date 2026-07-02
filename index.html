@@ -2,10 +2,10 @@
 <html lang="el" translate="no">
 
 <head>
-	<!-- <link rel="preload" as="image" href="assets/paint-roller-fixed.svg"> -->
-	<link rel="preload" as="image" href="assets/painter-man.webp">
 	<!-- <link rel="preload" as="image" href="assets/paint-roller-fixed-winter.png"> -->
 	<link rel="preload" as="image" href="assets/header2.webp" fetchpriority="high">
+	<!-- <link rel="preload" as="image" href="assets/paint-roller-fixed.svg"> -->
+	<link rel="preload" as="image" href="assets/painter-man.webp" fetchpriority="high">
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || []; w[l].push({
@@ -309,6 +309,51 @@
 			color: rgb(var(--white));
 		}
 
+		/* --- FAQ Section Styles --- */
+		#faq {
+			background-color: transparent;
+			padding: 2rem 1rem;
+			border-radius: 20px;
+		}
+
+		#faq .section_header {
+			margin-bottom: 0.5rem;
+		}
+
+		#faq .section_description {
+			margin-bottom: 3rem;
+		}
+
+		.faq-accordion {
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+
+		.faq-accordion details {
+			border-bottom: 2px solid rgb(var(--light-blue));
+			padding-bottom: 1rem;
+		}
+
+		/* Removes the bottom border from the very last FAQ item */
+		.faq-accordion details:last-child {
+			border-bottom: 1px solid transparent;
+		}
+
+		.faq-accordion summary {
+			font-size: 1.25rem;
+			font-weight: 650;
+			cursor: pointer;
+			color: rgb(var(--dark-blue));
+		}
+
+		.faq-accordion details p {
+			margin-top: 1rem;
+			line-height: 1.75rem;
+			font-size: 1.1rem;
+			color: rgb(var(--black));
+		}
+
 		@media (width > 319px) {
 			.nav_get_offer_btn {
 				display: flex;
@@ -572,7 +617,8 @@
 				<li><a href="#about" title="ΠΡΟΦΙΛ">ΠΡΟΦΙΛ</a></li>
 				<li><a href="gallery.html" title="ΣΥΛΛΟΓΗ">ΣΥΛΛΟΓΗ</a></li>
 				<li><a href="#service" title="ΥΠΗΡΕΣΙΕΣ">ΥΠΗΡΕΣΙΕΣ</a></li>
-				<li><a href="#blog" title="BLOG">BLOG</a></li>
+				<!-- <li><a href="#blog" title="BLOG">BLOG</a></li> -->
+				<li><a href="#faq" title="FAQ">FAQ</a></li>
 				<li><a href="contact.html" title="ΕΠΙΚΟΙΝΩΝΙΑ">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
 			</ul>
 		</nav>
@@ -582,7 +628,7 @@
 					<div class="first_col">
 						<div class="animated1">
 							<img src="assets/painter-man.webp" loading="eager"
-								alt="painter in a lader">
+								alt="painter in a ladder">
 						</div>
 						<h1>
 							ΕΛΑΙΟΧΡΩΜΑΤΙΣΜΟΙ<br> & ΑΝΑΚΑΙΝΙΣΕΙΣ<br> ΣΤΗΝ ΑΘΗΝΑ | Xrwma.com
@@ -598,7 +644,7 @@
 				<div class="frontpage_col">
 					<div class="animated2">
 						<img src="assets/painter-man.webp" loading="eager" alt="painter in a
-						lader">
+						ladder">
 					</div>
 				</div>
 			</div>
@@ -831,10 +877,11 @@
 				<img src="assets/vivechrom.webp" loading="lazy" alt="Xrwma.com vivechrom logo">
 				<img src="assets/vechro.webp" loading="lazy" alt="Xrwma.com vechro logo">
 				<img src="assets/vitex.webp" loading="lazy" alt="Xrwma.com vitex logo">
+				<img src="assets/kraft.webp" loading="lazy" alt="Xrwma.com kraft logo">
 				<img src="assets/vivechrom.webp" loading="lazy" alt="Xrwma.com vivechrom logo">
 				<img src="assets/vechro.webp" loading="lazy" alt="Xrwma.com vechro logo">
 				<img src="assets/vitex.webp" loading="lazy" alt="Xrwma.com vitex logo">
-
+				<img src="assets/kraft.webp" loading="lazy" alt="Xrwma.com kraft logo">
 			</div>
 		</section>
 		<section class="blog" id="blog">
@@ -858,7 +905,143 @@
 		<!--		</div>-->
 		<!--	</div>-->
 		<!--</section>-->
+		<section class="section_container" id="faq">
+			<h2 class="section_header">Συχνές Ερωτήσεις (FAQ): Ελαιοχρωματισμοί & Ανακαινίσεις</h2>
+			<p class="section_description">Όλα όσα πρέπει να γνωρίζετε πριν ξεκινήσετε το βάψιμο ή την
+				ανακαίνιση του σπιτιού σας.</p>
 
+			<div class="faq-accordion">
+
+				<details>
+					<summary>1. Πόσο κοστίζει το βάψιμο σπιτιού στην Αθήνα;</summary>
+					<p style="padding-inline: 10px 15px;">Η <strong>τιμή για βάψιμο σπιτιού</strong>
+						εξαρτάται κυρίως από τα
+						τετραγωνικά μέτρα και την
+						κατάσταση των τοίχων (αν απαιτούνται πολλά εκτεταμένα στοκαρίσματα ή
+						σπατουλάρισμα, επισκευές από υγρασία). Στο Xrwma.com, προσφέρουμε
+						τιμές προσαρμοσμένες σε κάθε έργο και στις ανάγκες σας.
+						<br><a href="https://xrwma.com/contact.html"
+							style="color: var(--blue); font-style:italic; font-weight: 700;"><u>
+								Επικοινωνήστε</u></a>
+						μαζί μας
+						για μια δωρεάν εκτίμηση στον χώρο σας, ώστε να λάβετε μια λεπτομερή
+						προσφορά.
+					</p>
+				</details>
+				<details>
+					<summary>2. Πόσο συχνά χρειάζεται βαφή το σπίτι μου;</summary>
+					<p style="padding-inline: 10px 15px;">
+						Για να διατηρήσετε την εμφάνιση και την προστασία του σπιτιού σας,
+						συνιστούμε το εξωτερικό βάψιμο κάθε 5 έως 10 χρόνια. Παράγοντες όπως ο η
+						έκθεση στον ήλιο και η υπάρχουσα ποιότητα χρώματος
+						επηρεάζουν το πόσο συχνά πρέπει να προχωρήσετε σε επαναβαφή. Το
+						εσωτερικό βάψιμο συνήθως χρειάζεται κάθε 2 έως
+						10 χρόνια, με περιοχές με υψηλή κυκλοφορία, όπως οι διάδρομοι και οι
+						κουζίνες, να απαιτούν πιο συχνή προσοχή από τα υπνοδωμάτια ή τα σαλόνια.
+					</p>
+				</details>
+
+				<details>
+					<summary>3. Πώς μπορώ να καταλάβω πότε χρειάζεται βαφή το εξωτερικό του σπιτιού
+						μου;</summary>
+					<p style="padding-inline: 10px 15px;">
+						Για να διαπιστώσετε εάν το εξωτερικό του σπιτιού σας χρειάζεται
+						επαναβαφή, ελέγξτε προσεκτικά για σημάδια χαλασμένου χρώματος. Αυτό
+						περιλαμβάνει ρωγμές, ξεφλούδισματα, φουσκάλες και σπασίματα.
+						Το χαλασμένο χρώμα μπορεί να αφήσει το εξωτερικό σας ευάλωτο στη
+						διείσδυση νερού και σε άλλα είδη ζημιών.<br> Προσφέρουμε <a
+							href="https://xrwma.com/contact.html"
+							style="color: var(--blue); font-style:italic; font-weight: 700;"><u>
+								δωρεάν εκτιμήσεις</u></a> για έργα ελαιοχρωματισμού τόσο
+						εξωτερικών όσο και εσωτερικών χώρων.
+					</p>
+				</details>
+
+				<details>
+					<summary>4. Στις τιμές για ελαιοχρωματισμούς περιλαμβάνονται και τα υλικά;
+					</summary>
+					<p style="padding-inline: 10px 15px;">Ναι! Για την δική σας διευκόλυνση,
+						παρέχουμε
+						<strong>ελαιοχρωματισμούς με τιμές που περιλαμβάνουν όλα τα
+							υλικά</strong>. Χρησιμοποιούμε κορυφαία, πιστοποιημένα χρώματα
+						της αγοράς (πλαστκά, ακρυλικά, αστάρια, στόκους). Φυσικά, αν το
+						επιθυμείτε, υπάρχει η δυνατότητα να αναλάβουμε μόνο το κόστος εργασίας
+						και να προμηθευτείτε εσείς τα χρώματα της επιλογής σας.
+					</p>
+				</details>
+
+				<details>
+					<summary>5. Ποια είναι τα καλύτερα και πιο ασφαλή χρώματα για παιδικά δωμάτια;
+					</summary>
+					<p style="padding-inline: 10px 15px;">Για εσωτερικούς χώρους, υπνοδωμάτια και
+						ειδικά για παιδικά δωμάτια, χρησιμοποιούμε αυστηρά <strong>οικολογικά
+							χρώματα</strong> (Eco-friendly). Είναι 100% άοσμα, υποαλλεργικά,
+						πλένονται εύκολα και δεν περιέχουν τοξικές ενώσεις (VOCs).</p>
+				</details>
+
+				<details>
+					<summary>6. Τι υλικά χρησιμοποιείτε για το εξωτερικό βάψιμο σπιτιού και
+						προσόψεων;</summary>
+					<p style="padding-inline: 10px 15px;">Για το <strong>εξωτερικό βάψιμο
+							σπιτιού</strong> και πολυκατοικιών, οι τοίχοι
+						δέχονται τεράστια καταπόνηση από τον ήλιο και τη βροχή. Γι' αυτό,
+						εφαρμόζουμε 100% ακρυλικά και ελαστομερή (μονωτικά) χρώματα που
+						σφραγίζουν τις μικρορωγμές και προσφέρουν αδιαβροχοποίηση. Μπορείτε να
+						δείτε φωτογραφίες από εξωτερικά βαψίματα στη <a
+							href="https://xrwma.com/gallery.html"
+							style="color: var(--blue); font-style:italic; font-weight: 700;"><u>
+								"Συλλογή"</u></a> μας.</p>
+				</details>
+
+				<details>
+					<summary>7. Πρέπει να αδειάσω το σπίτι και να μετακινήσω τα έπιπλα πριν έρθετε;
+					</summary>
+					<p style="padding-inline: 10px 15px;">Δεν χρειάζεται να κάνετε απολύτως τίποτα!
+						Αναλαμβάνουμε εμείς τη μετακίνηση
+						των επίπλων σας στο κέντρο του δωματίου και την προστασία τους. Τα
+						πατώματα, οι πόρτες και τα έπιπλά σας μένουν προστατευμένα σε όλη τη
+						διάρκεια των εργασιών.</p>
+				</details>
+
+				<details>
+					<summary>8. Έχω υγρασία και φουσκωμένους τοίχους. Μπορείτε να το επισκευάσετε;
+					</summary>
+					<p style="padding-inline: 10px 15px;">Η σωστή προετοιμασία είναι πολύ
+						σημαντική!<br>
+						Πριν ξεκινήσουμε τον
+						ελαιοχρωματισμό,
+						ξύνουμε τα σαθρά σημεία, καθαρίζουμε τη μούχλα με ειδικά μυκητοκτόνα
+						υγρά, και στοκάρουμε τους τοίχους. Εφαρμόζουμε ισχυρά
+						μονωτικά αστάρια για να διασφαλίσουμε ότι το πρόβλημα της υγρασίας δεν
+						θα επανέλθει.</p>
+				</details>
+
+				<details>
+					<summary>9. Πόσος χρόνος χρειάζεται για να ολοκληρωθεί το βάψιμο ενός
+						διαμερίσματος;</summary>
+					<p style="padding-inline: 10px 15px;">Συνήθως, για ένα
+						τυπικό διαμέρισμα (70-90τμ) στην Αθήνα, ο χρόνος ολοκλήρωσης είναι από 4
+						έως 7 ημέρες. Ο ακριβής χρόνος καθορίζεται πάντα από την αρχή, ανάλογα
+						με τις απαιτήσεις του διαμερίσματος.</p>
+				</details>
+
+				<details>
+					<summary>10. Πού μπορώ να δω αξιολογήσεις και φωτογραφίες "πριν και μετά";
+					</summary>
+					<p style="padding-inline: 10px 15px;">Στη σελίδα μας
+						θα βρείτε <strong>αξιολογήσεις πελατών</strong> για τον επαγγελματισμό
+						και την καθαριότητά μας. Επίσης, στην ενότητα της
+						<a href="https://xrwma.com/gallery.html"
+							style="color: var(--blue); font-style:italic; font-weight: 700;"><u>
+								Συλλογής</u></a> ,
+						μπορείτε να δείτε πραγματικές <strong>φωτογραφίες πριν και μετά</strong>
+						από ανακαινίσεις και ελαιοχρωματισμούς που έχουμε αναλάβει σε όλη την
+						Αττική.
+					</p>
+				</details>
+
+			</div>
+		</section>
 		<footer id="contact">
 			<div class="section_container footer_container">
 				<div class="footer_col">
@@ -877,7 +1060,8 @@
 						<li><a href="#about" title="ΠΡΟΦΙΛ">ΠΡΟΦΙΛ</a></li>
 						<li><a href="gallery.html" title="ΣΥΛΛΟΓΗ">ΣΥΛΛΟΓΗ</a></li>
 						<li><a href="#service" title="ΥΠΗΡΕΣΙΕΣ">ΥΠΗΡΕΣΙΕΣ</a></li>
-						<li><a href="#blog" title="BLOG">BLOG</a></li>
+						<!-- <li><a href="#blog" title="BLOG">BLOG</a></li> -->
+						<li><a href="#faq" title="FAQ">FAQ</a></li>
 						<li><a href="contact.html" title="ΕΠΙΚΟΙΝΩΝΙΑ">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
 					</ul>
 				</div>
@@ -891,7 +1075,7 @@
 				</div>
 			</div>
 			<div class="footer_bar">
-				Copyright © 2025 Xrwma.com
+				Copyright © 2025-2026 Xrwma.com
 			</div>
 		</footer>
 	</div>
